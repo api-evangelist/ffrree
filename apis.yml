@@ -1,7 +1,27 @@
 aid: ffrree
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ffrree.png
 name: ffrree
-description: ffrree is a company surfaced as a portfolio company of slow-ventures and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  ffrree (GitHub organization "Free") was an early-stage, Slow Ventures-backed
+  mobile software company active around 2015-2016. Its only public engineering footprint
+  is a GitHub organization of eight repositories - seven of them forks of third-party
+  iOS and backend libraries (AFNetworking, jot, TheAmazingAudioEngine, protobuf-objc,
+  redis-py, slack) plus an original CocoaPods "Specs" podspec mirror - with all repository
+  activity ceasing in 2016. The company is defunct: ffrree.com now serves a GoDaddy/Afternic
+  domain-for-sale parking lander, and there is no product, developer portal, documentation,
+  SDK, or API surface of any kind. Retained in the API Evangelist network as a verified
+  dead lead rather than deleted, so the slug is not re-researched from scratch.
 url: https://raw.githubusercontent.com/api-evangelist/ffrree/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +29,33 @@ x-backed-by:
 - slow-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-website-status: parked-for-sale
+x-enrichment-status: dead-lead
+x-enrichment-note: 'Enrichment 2026-07-20 (re-verified, evidence strengthened): ffrree.com
+  resolves to Afternic nameservers (ns1/ns2.afternic.com) on GoDaddy parking IPs and
+  serves a JS redirect to a for-sale lander; DNS has a null MX ("0 .") and "v=spf1 -all",
+  i.e. the domain sends no mail. Wildcard DNS makes api./developer./docs. subdomains
+  resolve to the same parking IPs, and every path - including /.well-known/* and /openapi.json
+  - returns a soft-200 parking page, so none of those are real artifacts and none were
+  saved. The host does serve a genuine /llms.txt, but it is GoDaddy''s domain-listing
+  blurb, not a company or API document, so it was deliberately NOT captured as an LLMsTxt
+  artifact. NEW this pass: the GitHub organization github.com/ffrree ("Free", created
+  2015-02-02, blog https://ffrree.com) does exist and is verifiably this company, but
+  7 of its 8 public repos are forks of third-party libraries and the last push was 2016-09-08
+  - no first-party product code, no OpenAPI, no spec to ground any artifact on. No npm
+  or PyPI packages exist under this name. Domain-security probing was deliberately skipped
+  because it would measure GoDaddy''s parking infrastructure, not the company. No artifacts
+  could honestly be searched, generated, or derived. No fabrication.'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Defunct
+- Mobile
+- iOS
+- Portfolio Lead
+- Dead Lead
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +65,10 @@ maintainers:
 common:
 - type: Website
   url: https://ffrree.com
+- type: GitHubOrganization
+  url: https://github.com/ffrree
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
