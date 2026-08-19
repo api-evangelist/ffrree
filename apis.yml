@@ -46,7 +46,7 @@ x-enrichment-note: 'Enrichment 2026-07-20 (re-verified, evidence strengthened): 
   or PyPI packages exist under this name. Domain-security probing was deliberately skipped
   because it would measure GoDaddy''s parking infrastructure, not the company. No artifacts
   could honestly be searched, generated, or derived. No fabrication.'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 tags:
